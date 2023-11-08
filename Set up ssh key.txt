@@ -1,0 +1,16 @@
+Step 1: genrate ssh-key
+
+ssh-keygen -t rsa -b 1024 -C "email_id"
+
+Step 2: Start the ssh agent
+
+ssh-agent -s
+
+Step 3: ssh-add adds the rsa identities to the authentication agent
+
+ssh-add ~/.ssh/id_rsa
+
+Step 4: copy public key to clipboard
+
+clip < ~/.ssh/id_rsa.pub
+
